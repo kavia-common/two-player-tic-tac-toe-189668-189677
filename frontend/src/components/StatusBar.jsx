@@ -15,7 +15,7 @@ export default function StatusBar({ currentPlayer, winner, isDraw }) {
   if (winner) {
     return (
       <div className="status-bar">
-        <div className="status-pill win" role="status" aria-live="polite">
+        <div id="status-message" className="status-pill win" role="status" aria-live="polite">
           <span className="dot" aria-hidden="true" />
           <strong>Winner: </strong>&nbsp;Player {winner}
         </div>
@@ -26,7 +26,7 @@ export default function StatusBar({ currentPlayer, winner, isDraw }) {
   if (isDraw) {
     return (
       <div className="status-bar">
-        <div className="status-pill draw" role="status" aria-live="polite">
+        <div id="status-message" className="status-pill draw" role="status" aria-live="polite">
           <span className="dot" aria-hidden="true" />
           <strong>Draw</strong>&nbsp;No more moves
         </div>
@@ -36,7 +36,7 @@ export default function StatusBar({ currentPlayer, winner, isDraw }) {
 
   return (
     <div className="status-bar">
-      <div className="status-pill" role="status" aria-live="polite">
+      <div id="status-message" className="status-pill" role="status" aria-live="polite">
         <span className="dot" aria-hidden="true" />
         <strong>Turn:</strong>&nbsp;Player {currentPlayer}
       </div>
